@@ -17,10 +17,12 @@ sudo curl https://packages.microsoft.com/config/rhel/9/prod.repo | sudo tee /etc
 (Must choose with selinux or not! check with `getenforce` at terminal)
 
 ```
+# with selinux status at gentenforce : Enforcing
 sudo yum install -y mssql-server-selinux
 ```
 OR 
 ```
+# with selinux status at gentenforce : Permissive or Disabled 
 sudo yum install -y mssql-server
 ```
 
@@ -30,7 +32,8 @@ sudo yum install -y mssql-tools
 sudo yum install -y unixODBC-devel
 ```
 
-# 5. Run the MS SQL Server setup, Choose Edition, Accept License Terms, Create sa password
+# 5. Run the MS SQL Server setup
+Choose Edition, Accept License Terms, Create *sa* (the system administator) password
 ```
 sudo /opt/mssql/bin/mssql-conf setup
 ```
