@@ -8,25 +8,26 @@ summarized from https://learn.microsoft.com/en-us/sql/linux/quickstart-install-c
 sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/9/mssql-server-2022.repo
 ```
 
-# 2. Repository for MS SQL Server Tools
+# 2. Repository for MS SQL Tools
 
 ```
 sudo curl https://packages.microsoft.com/config/rhel/9/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
 ```
-# 3. Download and Install SQL Server 
+# 3. Download and Install MS SQL Server 
 (Must choose with selinux or not! check with `getenforce` at terminal)
 
+*with selinux status at gentenforce : Enforcing*
 ```
-# with selinux status at gentenforce : Enforcing
 sudo yum install -y mssql-server-selinux
 ```
 OR 
+
+*with selinux status at gentenforce : Permissive or Disabled* 
 ```
-# with selinux status at gentenforce : Permissive or Disabled 
 sudo yum install -y mssql-server
 ```
 
-# 4. Download and Install SQL Server Tools
+# 4. Download and Install MS SQL Tools
 ```
 sudo yum install -y mssql-tools
 sudo yum install -y unixODBC-devel
@@ -61,10 +62,12 @@ sudo systemctl status mssql-server
 # 8. Install SQL Server Full-Text Search on Linux 
 (optional - for advanced search text in query, available on Express Edition with Advanced Service an above.)
 
+
+*add the repo, if you have already add the repo no.2 above, you don't need to run this again, just go to download and install below*
 ```
-# if you have add the repo no.2 above, you don't need to run this again:
 sudo curl https://packages.microsoft.com/config/rhel/9/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
 ```
+download and install:
 ```
 sudo yum install -y mssql-server-fts
 ```
@@ -90,14 +93,14 @@ SELECT
 
 
 
-# 9. Download SQL Server Management Studio (Windows Client), 
-open and download link: https://aka.ms/ssmsfullsetup then follow the instruction
+# 9. Download SQL Server Management Studio 
+Windows OS GUI Client, open and download link: https://aka.ms/ssmsfullsetup then follow the instruction
 
 
 
 
-# 10. Download Azure Data Studio (Linux Client, use Redhat .rpm file), 
-open and find the download link at:
+# 10. Download Azure Data Studio 
+Linux OS Client with GUI, use Redhat .rpm file, open and find the download link at:
 https://learn.microsoft.com/en-us/azure-data-studio/download-azure-data-studio
 
 
@@ -106,7 +109,7 @@ then install:
 sudo yum install ./Downloads/azuredatastudio-linux-*<version string>*.rpm
 ```
 
-after installation, run, just type at the terminal:
+after installation, run Azure Data Studio by typing at the terminal:
 ```
 azuredatastudio
 ```
@@ -115,3 +118,4 @@ azuredatastudio
 
  - MS SQL Server 2022 Editions : https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2022?view=sql-server-ver16
  - CLI Tools, sqlcmd : https://learn.microsoft.com/en-us/sql/tools/sqlcmd/sqlcmd-utility?view=sql-server-ver16&tabs=go%2Cwindows&pivots=cs1-bash
+ - Sample MS SQL Server database AdventureWorks : https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms
