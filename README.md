@@ -60,7 +60,7 @@ sudo systemctl status mssql-server
 ```
 
 # 8. Install SQL Server Full-Text Search on Linux 
-(optional - for advanced search text in query, available on Express Edition with Advanced Service an above.)
+(optional - for advanced search text in query, available on Express Edition with Advanced Service and above.)
 
 
 *add the repo, if you have already add the repo no.2 above, you don't need to run this again, just go to download and install below*
@@ -106,7 +106,7 @@ https://learn.microsoft.com/en-us/azure-data-studio/download-azure-data-studio
 
 then install:
 ```
-sudo yum install ./Downloads/azuredatastudio-linux-*<version string>*.rpm
+sudo yum install ./Downloads/azuredatastudio-linux-<version string>.rpm
 ```
 
 after installation, run Azure Data Studio by typing at the terminal:
@@ -114,8 +114,8 @@ after installation, run Azure Data Studio by typing at the terminal:
 azuredatastudio
 ```
 
- # 11. Other useful link
+ # 11. Other useful links
 
- - MS SQL Server 2022 Editions : https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2022?view=sql-server-ver16
+ - MS SQL Server 2022 Editions comparison: https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2022?view=sql-server-ver16
  - CLI Tools, sqlcmd : https://learn.microsoft.com/en-us/sql/tools/sqlcmd/sqlcmd-utility?view=sql-server-ver16&tabs=go%2Cwindows&pivots=cs1-bash
  - Sample MS SQL Server database AdventureWorks : https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms
