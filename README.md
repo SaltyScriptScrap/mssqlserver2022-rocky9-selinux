@@ -2,6 +2,8 @@ Tutorial to install  MSSQL Server 2022   on   Redhat 9 / Rocky Linux 9 / CentOS 
 
 summarized from https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-red-hat?view=sql-server-linux-ver16&preserve-view=true&tabs=rhel9#install
 
+watch the tutorial here: https://www.youtube.com/watch?v=65SapmB-De0
+
 # 1. Repository for MS SQL Server
 
 ```
